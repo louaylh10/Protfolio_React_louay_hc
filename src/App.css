@@ -1,0 +1,398 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  --color1:#f0eeee;
+  --color2:#141313;
+  background-color: var(--color2);
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding:12px 20px;
+} 
+.tt a {
+  text-decoration: none;
+  }
+header a{
+  text-decoration: none;
+}  
+.headitems{
+  display: flex;
+}
+.headitems .item{
+  padding-left: 30px;
+  margin-right: 20px;
+}
+.headitems .item a{
+  color: var(--color1);
+  display: inline-block;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.headitems li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height:3px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;    
+}
+.headitems li a:hover:after{width:100%;}
+.selected a {
+border-bottom: 3px solid var(--color1);
+
+}
+
+.open-menu,.close-menu{
+  position: absolute;
+  color:var(--color1);
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: none;
+  }
+  #check{
+    display: none;
+  }
+  .open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+  top: 20px;
+  right: 20px;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 300px;
+  margin-top: -18px;
+  justify-content: center; /* Centrer le contenu horizontalement */
+  text-align: center;
+padding-top:75px ;
+color: var(--color1);
+font-size: 35px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color:#000000a7;
+  z-index: -1; 
+}
+
+.container::after {
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  background-image: url("img/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2; 
+  
+}
+@keyframes anim{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+.download {
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color1);
+  background-color: transparent;
+  border: 2px solid var(--color1);
+  cursor: pointer;
+  position: relative;
+  transition: 0.15s ease-in-out; 
+  z-index: 1;
+  animation: anim 6s;
+}
+
+.download::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+  z-index: -1;
+}
+
+.download:hover {
+  color: var(--color2);
+}
+
+.download:hover::before {
+  width: 100%;
+}
+.contact{
+  top: 450px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  left: 49%;
+  transform: translateX(-50%);
+  animation: anim 6s;
+}
+.contact .cnt{
+  display: inline-block;
+padding-left: 25px;
+
+}
+.contact .cnt a{
+  text-decoration: none;
+  color: white;
+ 
+}
+.contact .cnt a i{
+  transition: 0.15s ease-in-out;
+}
+.fb:hover{
+color:#016DB8;
+}
+
+.insta:hover {
+  color: transparent;
+  background: linear-gradient(to right, #B8015D, #E8B003);
+  background-clip: text;
+}
+.lnk:hover{
+  color:#016DB8;
+}
+.what:hover{
+  color: #06b806;
+}
+.skills{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+position: relative;
+background-color: var(--color2);
+margin-top:20%;
+padding: 40px 15px;
+height: 300px;
+}
+.skills .skil{
+  padding-left: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 120px;
+  display: inline-block;
+  cursor: pointer;
+}
+.skills h2{
+  color:var(--color1);
+  text-align: center;
+ font-size: 35px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.skil label{
+  opacity: 0;
+  transition: 0.15 ease-in-out;
+}
+.skil:hover label{
+  opacity: 1;
+}
+.projects{
+  margin-top: 95px;
+  width: 100%;
+  background-color: var(--color1);
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.projects h2{
+  width: 100%;
+  margin-top: 20px;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.projects .project{
+  margin-left: 41%;
+  list-style: none;
+}
+.projects .project li{
+  margin-top: 10px;
+  font-size: 30px;
+}
+@media (max-width:991px){
+  .headitems{
+flex-direction:column;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100vh;
+position: fixed;
+top: -100%;
+right: 0;
+z-index: 100;
+background-color: var(--color2);
+transition: all 0.2s ease-in-out;
+}
+.headitems li{
+  margin-top: 40px;
+}
+.headitems li a{
+  padding: 10px;
+}
+.open-menu,.close-menu{ display: block;}
+#check:checked ~ .headitems{ top: 0;  } 
+.hello img{
+  width: 400px;
+  height:400px;
+}
+.container{
+  font-size: 25px;
+padding-top:30px ;
+}
+
+.contact{
+  top: 450px;
+left: 48%;
+}
+.cnt{
+  padding-left: 20px;
+}
+.skills{
+  margin-top: 19%;
+}
+.skills .skil{
+  padding-left: 0px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 30px;
+  display: inline-block;
+} 
+.projects .project li{
+  margin-left:-72px;
+}
+}
+@media (max-width:552px) {
+  .navbar{
+    position: fixed;
+    z-index: 100;
+  }
+  .container{
+    font-size: 25px;
+  padding-top:30px ;
+  margin-top: 16%;
+  }
+  
+  .contact{
+    top: 470px;
+  left: 48%;
+  }
+  .cnt{
+    padding-left: 20px;
+  }
+  .skills{
+    margin-top: 20%;
+  }
+  .skills .skil{
+    padding-left: 0px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 50px;
+    display: inline-block;
+  }
+  .skil label{
+    opacity: 1;
+  }
+}
+@media (max-width:479px) {
+  .skills{
+    margin-top: 20%;
+  }
+  .skil label{
+    display: block;
+  }
+  .skills .skil{
+    padding-left: 0px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    display: inline-block;
+  } 
+}
+@media (max-width:412px) {
+  .container{
+    font-size: 21px;
+  padding-top:30px ;
+  margin-top: 16%;
+  }
+  .contact{
+    top: 400px;
+  left: 48%;
+  }
+  .skil img{
+    width: 80px;
+    height: 80px;
+  }
+  .skills{
+    height: 430px;
+  }
+}
