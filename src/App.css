@@ -259,7 +259,7 @@ height: 300px;
   margin-top: 95px;
   width: 100%;
   background-color: var(--color1);
-  height: 300px;
+padding: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -279,6 +279,46 @@ height: 300px;
   margin-top: 10px;
   font-size: 30px;
 }
+.projects .prjcts{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.prjcts .prj {
+  width: 300px;
+  padding-bottom: 35px;
+  box-shadow: 5px 5px 8px #141313;
+  border-radius: 25px;
+  transition: 0.5s ease-in-out;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.prjcts .prj:hover {
+  transform: scale(1.1);
+}
+
+.prj .wbs{
+  width: 100%;
+  height: 40%;
+}
+.wbs img{
+  width: 100%;
+  height:100%;
+ border-top-left-radius: 25px;
+ border-top-right-radius: 25px;
+}
+.prtit{
+  margin-top: 30px;
+  font-size: 20px;
+
+}
+.prtit a{
+  text-decoration: none;
+  color: var(--color2);
+}
 @media (max-width:991px){
   .headitems{
 flex-direction:column;
@@ -292,6 +332,11 @@ right: 0;
 z-index: 100;
 background-color: var(--color2);
 transition: all 0.2s ease-in-out;
+}
+.prjcts  {
+ margin-top: 30px;
+
+ 
 }
 .headitems li{
   margin-top: 40px;
